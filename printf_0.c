@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	while (format[i])
+	while (format && foirmat[i])
 	{
 		if (format[i] == '%')
 		{
@@ -33,21 +33,21 @@ int _printf(const char *format, ...)
 					if (s != NULL)
 					{
 						counter += _puts(s);
-					}
-					i += 2;
+					} i += 2;
 					break;
 
 				case '%':
 					counter += _putchar(format[i]);
 					i += 2;
-			}
-			continue;
+
+				default:
+					counter += _putchar(format[i]);
+					i++;
+			} continue;
 		}
 		counter += _putchar(format[i]);
 		i++;
-	}
-	va_end(arg);
-	return (counter);
+	} va_end(arg), return (counter);
 }
 /**
  * _putchar - print a character
