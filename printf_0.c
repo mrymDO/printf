@@ -13,11 +13,11 @@ int _printf(const char *format, ...)
 	int counter = 0;
 	char *s;
 
-	va_start(arg, format);
 	if (format == NULL)
 		return (-1);
+	va_start(arg, format);
 
-	while (format && foirmat[i])
+	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
@@ -37,17 +37,15 @@ int _printf(const char *format, ...)
 					break;
 
 				case '%':
-					counter += _putchar(format[i]);
+					counter += _putchar('%');
 					i += 2;
-
-				default:
-					counter += _putchar(format[i]);
-					i++;
-			} continue;
+			} 
+			continue;
 		}
 		counter += _putchar(format[i]);
 		i++;
-	} va_end(arg), return (counter);
+	} va_end(arg);
+       	return (counter);
 }
 /**
  * _putchar - print a character
@@ -56,7 +54,7 @@ int _printf(const char *format, ...)
  */
 int _putchar(char c)
 {
-	return (1, &c, 1);
+	return (write(1, &c, 1));
 }
 
 /**
