@@ -1,23 +1,21 @@
 #include "main.h"
 
 /**
- * _print - prints output according to the format
+ * _printf - prints output according to the format
  * @format: character strin
  * Return: number of characters
  */
 
-int _print(const char *format, ...)
+int _printf(const char *format, ...)
 {
-	va_list arg = 0;
+	va_list arg;
 	int i = 0;
 	int counter = 0;
+	char *s;
 
 	va_start(arg, format);
 
-	if (format == NULL)
-		return (0);
-
-	while (format[i])
+	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
@@ -29,13 +27,17 @@ int _print(const char *format, ...)
 					break;
 
 				case 's':
-					counter += _puts(va_arg(arg, char *));
+					s = va_arg(arg, char *);
+					if (s != NULL)
+					{
+						counter += _puts(s);
+					}
 					i += 2;
 					break;
 
 				case '%':
 					counter += _putchar(format[i]);
-					i++;
+					i += 2;
 			}
 			continue;
 		}
