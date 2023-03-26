@@ -41,13 +41,13 @@ int _printf(const char *format, ...)
 				case '%':
 					counter += _putchar('%');
 					i += 2;
-			} 
+			}
 			continue;
 		}
 		counter += _putchar(format[i]);
 		i++;
 	} va_end(arg);
-       	return (counter);
+	return (counter);
 }
 /**
  * _puts - prints a string
