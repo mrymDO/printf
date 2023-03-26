@@ -11,12 +11,7 @@ int _putstr(char *str)
 {
 	int i;
 
-	if (str == NULL)
-	{
-		write(1, "(nill)", 6);
-		return (6);
-	}
-	else
+	i = 0;
 		for (i = 0; str[i] != '\0'; i++)
 			_putchar(str[i]);
 	return (i);
