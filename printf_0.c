@@ -43,6 +43,7 @@ int _printf(const char *format, ...)
 				case '%':
 					counter += _putchar('%');
 					i += 2;
+					break;
 			}
 			continue;
 		}
