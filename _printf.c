@@ -37,11 +37,11 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && i == 0)
 		{
 			i++;
 			if (format[i] == '\0')
-				break;
+				return (-1);
 			else if (format[i])
 				print_all(format[i], arg, &len);
 		}
