@@ -15,7 +15,7 @@ int _putstr(char *str)
 	if (str == NULL)
 	{
 		write(1, "(null)", 6);
-		return (-1);
+		return (6);
 	}
 	while (str[i])
 		write(1, &str[i++], 1);
