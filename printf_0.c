@@ -1,6 +1,7 @@
 #include "main.h"
-#include<stddef.h>
+#include<unistd.h>
 #include<stdarg.h>
+#include <stdlib.h>
 /**
  * _printf - prints output according to the format
  * @format: character strin
@@ -31,31 +32,23 @@ int _printf(const char *format, ...)
 
 				case 's':
 					s = va_arg(arg, char *);
-					if (s != NULL)
-					{
+					if (s == NULL)
+						s = "(nul)";
+					else
 						counter += _puts(s);
-					} i += 2;
+					i += 2;
 					break;
 
 				case '%':
 					counter += _putchar('%');
 					i += 2;
-			} 
+			}
 			continue;
 		}
 		counter += _putchar(format[i]);
 		i++;
 	} va_end(arg);
-       	return (counter);
-}
-/**
- * _putchar - print a character
- * @c: character to print
- * Return: 1
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
+	return (counter);
 }
 
 /**
