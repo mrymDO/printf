@@ -41,7 +41,10 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '\0')
+			{
+				va_end(arg);
 				return (-1);
+			}
 			else if (format[i])
 				print_all(format[i], arg, &len);
 		}
