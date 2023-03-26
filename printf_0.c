@@ -45,6 +45,7 @@ int _printf(const char *format, ...)
 					i += 2;
 					break;
 			}
+			continue;
 		}
 		counter += _putchar(format[i]);
 		i++;
