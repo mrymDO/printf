@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	char *s;
 
 	if (format == NULL)
-		return (0);
+		return (-1);
 	va_start(arg, format);
 
 	while (format && format[i])
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 				case 's':
 					s = va_arg(arg, char *);
 					if (s == NULL)
-						return (0);
+						return (-1);
 					if (s)
 					{
 						counter += _puts(s);
