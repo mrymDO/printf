@@ -13,7 +13,7 @@
 void print_all(char c, va_list arg, int *len)
 {
 	if (c == '%')
-		*len += _putchar(c);
+		*len += _putchar('%');
 	else if (c == 'c')
 		*len += _putchar(va_arg(arg, int));
 	else if (c == 's')
