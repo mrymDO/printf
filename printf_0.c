@@ -32,7 +32,9 @@ int _printf(const char *format, ...)
 
 				case 's':
 					s = va_arg(arg, char *);
-					if (s != NULL)
+					if (s == NULL)
+						return (0);
+					if (s)
 					{
 						counter += _puts(s);
 					} i += 2;
