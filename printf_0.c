@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 				case 's':
 					s = va_arg(arg, char *);
 					if (s == NULL)
-						s = "(nul)";
+						s = "(null)";
 					else
 						counter += _puts(s);
 					i += 2;
