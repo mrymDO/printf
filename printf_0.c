@@ -49,16 +49,6 @@ int _printf(const char *format, ...)
        	return (counter);
 }
 /**
- * _putchar - print a character
- * @c: character to print
- * Return: 1
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
  * _puts - prints a string
  * @s: string to be printed
  * Return: number of character of string
