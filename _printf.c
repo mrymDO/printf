@@ -1,5 +1,6 @@
 #include "main.h"
 #include<stdarg.h>
+#include<stdlib.h>
 /**
  * print_all - check the type of format
  *
@@ -31,6 +32,8 @@ int _printf(const char *format, ...)
 	int i;
 	int len = 0;
 
+	if (format == NULL)
+		return (-1);
 	va_start(arg, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
