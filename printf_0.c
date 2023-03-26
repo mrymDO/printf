@@ -1,6 +1,7 @@
 #include "main.h"
 #include<stddef.h>
 #include<stdarg.h>
+#include<stdlib.h>
 /**
  * _printf - prints output according to the format
  * @format: character strin
