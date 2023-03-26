@@ -1,7 +1,8 @@
 #include "main.h"
 #include<unistd.h>
 #include<stdarg.h>
-#include <stdlib.h>
+#include<stdlib.h>
+
 /**
  * _printf - prints output according to the format
  * @format: character strin
