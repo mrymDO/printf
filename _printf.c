@@ -28,6 +28,8 @@ void print_all(char c, va_list arg, int *len)
 		print_octal_number(va_arg(arg, int), len);
 	else if (c == 'x' || c == 'X')
 		print_hex_number(va_arg(arg, int), c, len);
+	else if (c == 'S')
+		print_string(va_arg(arg, char *), len);
 }
 /**
  * _printf - code our printf
