@@ -76,7 +76,7 @@ void print_hex_number(unsigned int number, char c, int *len)
  */
 int _strlen(char *s)
 {
-	int i = 0, len;
+	int i, len = 0;
 
 	for (i = 0; s[i]; i++)
 		len++;
