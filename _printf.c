@@ -22,6 +22,12 @@ void print_all(char c, va_list arg, int *len)
 		print_number(va_arg(arg, int), len);
 	else if (c == 'b')
 		print_binary(va_arg(arg, int), len);
+	else if (c == 'u')
+		print_unsigned_number(va_arg(arg, int), len);
+	else if (c == 'o')
+		print_octal_number(va_arg(arg, int), len);
+	else if (c == 'x' || c == 'X')
+		print_hex_number(va_arg(arg, int), c, len);
 }
 /**
  * _printf - code our printf
