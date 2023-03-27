@@ -10,7 +10,7 @@
 void print_pointer(void *ptr, int *len)
 {
 	unsigned long int addr = (unsigned long int)ptr;
-	char hex[16];
+	char hex[16] = {0};
 	int i, digit;
 
 	_putstr("0x");
