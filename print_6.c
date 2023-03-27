@@ -18,6 +18,8 @@ void print_pointer(void *ptr, int *len)
 	if (addr == 0)
 	{
 		_putstr("(nil)");
+		*len += 5;
+
 		return;
 	}
 
