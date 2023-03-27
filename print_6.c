@@ -9,16 +9,16 @@
 
 void print_pointer(void *ptr, int *len)
 {
-	unsigned long int addr = (unsigned long int)ptr;
+	unsigned long int addr = (unsigned long int)ptr; 
 	char hex[16] = {0};
 	int i, digit;
+	char *s = "(nil)";
 
 	_putstr("0x");
 
 	if (addr == 0)
 	{
-		_putchar('0');
-		*len += 1;
+		_putstr(s);
 		return;
 	}
 
