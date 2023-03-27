@@ -31,7 +31,11 @@ void print_all(char c, va_list arg, int *len)
 	else if (c == 'S')
 		print_string(va_arg(arg, char *), len);
 	else if (c == 'p')
-		print_pointer(va_arg(arg, void *), len);
+	{
+		*len += _putstr("0x");
+		print_adress(va_arg(arg, unsigned long), "0123456789abcdef", len);
+
+	}
 }
 /**
  * _printf - code our printf
