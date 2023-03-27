@@ -18,6 +18,8 @@ void print_all(char c, va_list arg, int *len)
 		*len += _putchar(va_arg(arg, int));
 	else if (c == 's')
 		*len += _putstr(va_arg(arg, char *));
+	else if (c == 'd' || c == 'i')
+		print_number(va_arg(arg, int), len);
 }
 /**
  * _printf - code our printf
