@@ -34,7 +34,7 @@ void print_all(char c, va_list arg, int *len)
 	{
 		if (va_arg(arg, unsigned long) == 0)
 		{
-			*len = _putstr(NULL);
+			*len = _putstr("0x0000");
 			return;
 		}
 		*len += _putstr("0x");
