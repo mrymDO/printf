@@ -12,12 +12,13 @@ void print_number(int number, int *len)
 {
 	if (number == -2147483648)
 	{
+		*len += 11;
 		write(1, "-2147483648", 11);
 		return;
 	}
 	if (number < 0)
 	{
-		_putchar('-');
+		*len += _putchar('-');
 		number *= -1;
 	}
 	if (number >= 0 && number <= 9)
