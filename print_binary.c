@@ -11,7 +11,7 @@ void print_binary(int number, int *len)
 {
 	if (number < 0)
 	{
-		*len += _putchar(number + 48);
+		*len += _putchar('-');
 		number *= -1;
 	}
 	if (number <= 1)
