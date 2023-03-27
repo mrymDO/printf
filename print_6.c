@@ -32,7 +32,6 @@ void print_pointer(void *ptr, int *len)
 		else
 		{
 			hex[i] = digit - 10 + 'a';
-			hex[i] -= 32; /*convert to upper*/
 		}
 
 		addr /= 16;
