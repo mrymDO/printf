@@ -11,6 +11,7 @@ void print_binary(unsigned int number, int *len);
 void print_unsigned_number(unsigned int number, int *len);
 void print_octal_number(unsigned int number, int *len);
 void print_hex_number(unsigned int number, char c, int *len);
+int _putchar_buff(char c);
 
 
 #endif
