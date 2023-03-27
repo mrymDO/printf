@@ -12,13 +12,12 @@ void print_pointer(void *ptr, int *len)
 	unsigned long int addr = (unsigned long int)ptr;
 	char hex[16] = {0};
 	int i, digit;
-	char *s = "(nil)";
 
 	_putstr("0x");
 
 	if (addr == 0)
 	{
-		_putstr(s);
+		_putstr("(nil)");
 		return;
 	}
 
@@ -33,6 +32,7 @@ void print_pointer(void *ptr, int *len)
 		else
 		{
 			hex[i] = digit - 10 + 'a';
+			hex[i] -= 32; /*convert to upper*/
 		}
 
 		addr /= 16;
