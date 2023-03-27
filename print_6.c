@@ -37,7 +37,7 @@ void print_pointer(void *ptr, int *len)
 
 		addr /= 16;
 	}
-	for (i -= 1, i >= 0; i--)
+	for (i -= 1; i >= 0; i--)
 	{
 		_putchar(hex[i]);
 		*len += 1;
