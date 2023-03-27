@@ -30,6 +30,8 @@ void print_all(char c, va_list arg, int *len)
 		print_hex_number(va_arg(arg, int), c, len);
 	else if (c == 'S')
 		print_string(va_arg(arg, char *), len);
+	else if (c == 'p')
+		*len += _printf("%p", va_arg(arg, void *));
 }
 /**
  * _printf - code our printf
