@@ -9,7 +9,7 @@
 
 void print_pointer(void *ptr, int *len)
 {
-	unsigned long int addr = (unsigned long int)ptr; 
+	unsigned long int addr = (unsigned long int)ptr;
 	char hex[16] = {0};
 	int i, digit;
 	char *s = "(nil)";
