@@ -7,7 +7,7 @@
  *
  * Return: void
  */
-void print_binary(int number, int *len)
+void print_binary(unsigned int number, int *len)
 {
 	if (number <= 1)
 		*len += _putchar(number + 48);
