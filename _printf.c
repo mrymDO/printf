@@ -32,7 +32,7 @@ void print_all(char c, va_list arg, int *len)
 		print_string(va_arg(arg, char *), len);
 	else if (c == 'p')
 	{
-		if (va_arg(arg, int *) == NULL)
+		if (va_arg(arg, void *) == NULL)
 		{
 			*len += _putstr(NULL);
 			return;
