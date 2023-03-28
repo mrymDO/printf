@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * rot - function crypt string
  *
@@ -12,8 +13,8 @@ void rot(char *str, int *len)
 	int i;
 	int j;
 
-	char ca[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char chare[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char ca[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
+	char chare[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
 
 	for (i = 0; str[i]; i++)
 	{
