@@ -35,6 +35,8 @@ void print_all(char c, va_list arg, int *len)
 		*len += _putstr("0x");
 		print_adress(va_arg(arg, unsigned long), "0123456789abcdef", len);
 	}
+	else if (c == 'r')
+		rev_print(va_arg(arg, char *), len);
 }
 /**
  * _printf - code our printf

@@ -14,5 +14,6 @@ void print_hex_number(unsigned int number, char c, int *len);
 int _putchar_buff(char c);
 void print_string(char *str, int *len);
 void print_adress(unsigned long i, char *s, int *len);
+void rev_print(char *str, int *len);
 
 #endif
