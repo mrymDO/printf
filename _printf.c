@@ -39,6 +39,12 @@ void print_all(char c, va_list arg, int *len)
 		rev_print(va_arg(arg, char *), len);
 	else if (c == 'R')
 		rot(va_arg(arg, char *), len);
+	else if (c == '+')
+		print_plus(va_arg(arg, int), len);
+	else if (c == ' ')
+		print_space(va_arg(arg, int), len);
+	else if (c == '#')
+		print_prefix(va_arg(arg, int), c, len);
 }
 /**
  * _printf - code our printf

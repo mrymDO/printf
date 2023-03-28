@@ -16,5 +16,8 @@ void print_string(char *str, int *len);
 void print_adress(unsigned long i, char *s, int *len);
 void rev_print(char *str, int *len);
 void rot(char *str, int *len);
+void print_plus(int num, int *len);
+void print_space(int num, int *len);
+void print_prefix(int num, char c, int *len);
 
 #endif
