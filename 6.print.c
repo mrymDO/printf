@@ -10,7 +10,7 @@
  */
 void print_adress(unsigned long i, char *s, int *len)
 {
-	if (i > 16)
+	if (i >= 16)
 	{
 		print_adress(i / 16, s, len);
 		print_adress(i % 16, s, len);
