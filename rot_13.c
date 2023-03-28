@@ -10,14 +10,20 @@
 void rot(char *str, int *len)
 {
 	int i;
+	int j;
 
+	char ca[] = "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz";
+	char chare[] = "NOPQRSTUVWXYZnopqrstuvwxyzABCDEFGHIJKLMabcdefghijklm";
 	for (i = 0; str[i]; i++)
 	{
-		if ((str[i] >= 'a' && str[i] < 'n') || (str[i] >= 'A' && str[i] < 'N'))
-			str[i] += 13;
-		else if ((str[i] >= 'N' && str[i] <= 'Z') ||
-				(str[i] >= 'n' && str[i] <= 'z'))
-			str[i] -= 13;
-		*len += _putchar(str[i]);
+		for (j = 0; j < 52; j++)
+		{
+			if (str[i] == ca[j])
+			{
+				str[i] = chare[j];
+				break;
+			}
+		}
 	}
+	*len += _putstr(str);
 }
