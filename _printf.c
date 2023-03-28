@@ -32,13 +32,8 @@ void print_all(char c, va_list arg, int *len)
 		print_string(va_arg(arg, char *), len);
 	else if (c == 'p')
 	{
-		if (!(va_arg(arg, unsigned long)))
-			*len += _putstr("(nil)");
-		else
-		{
-			*len += _putstr("0x");
-			print_adress(va_arg(arg, unsigned long), "0123456789abcdef", len);
-		}
+		*len += _putstr("0x");
+		print_adress(va_arg(arg, unsigned long), "0123456789abcdef", len);
 	}
 }
 /**
