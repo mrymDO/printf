@@ -37,6 +37,8 @@ void print_all(char c, va_list arg, int *len)
 	}
 	else if (c == 'r')
 		rev_print(va_arg(arg, char *), len);
+	else if (c == 'R')
+		rot(va_arg(arg, char *), len);
 }
 /**
  * _printf - code our printf
